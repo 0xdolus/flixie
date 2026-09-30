@@ -100,6 +100,25 @@ android {
         }
     }
 
+    // Signing for the "stable" flavor. Upstream CloudStream ships stable builds unsigned
+    // (they are signed later by the maintainers), and Android refuses to install an
+    // unsigned APK ("You can't install the app on your device").
+    // Set these env vars (see .github/workflows/build-apk.yml) to sign with your own key.
+    // Without them we fall back to the debug key so the APK is always installable,
+    // but note that key can change between CI runs, so updates may need an uninstall first.
+    val flixieKeystorePath: String? = System.getenv("FLIXIE_KEYSTORE_FILE")
+    val hasFlixieKeystore = !flixieKeystorePath.isNullOrBlank() && File(flixieKeystorePath).exists()
+    signingConfigs {
+        if (hasFlixieKeystore) {
+            create("flixieRelease") {
+                storeFile = file(flixieKeystorePath!!)
+                storePassword = System.getenv("FLIXIE_KEYSTORE_PASSWORD")
+                keyAlias = System.getenv("FLIXIE_KEY_ALIAS")
+                keyPassword = System.getenv("FLIXIE_KEY_PASSWORD")
+            }
+        }
+    }
+
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
@@ -166,6 +185,12 @@ android {
     productFlavors {
         create("stable") {
             dimension = "state"
+            signingConfig = if (hasFlixieKeystore) {
+                signingConfigs.getByName("flixieRelease")
+            } else {
+                logger.warn("No FLIXIE_KEYSTORE_FILE set, signing stable build with the debug key")
+                signingConfigs.getByName("debug")
+            }
         }
         create("prerelease") {
             dimension = "state"
