@@ -1,0 +1,30 @@
+package com.dolus.flixie.utils
+
+import com.dolus.flixie.Prerelease
+import io.ktor.http.decodeURLQueryComponent
+import io.ktor.http.encodeURLParameter
+
+object StringUtils {
+    fun String.decodeUrl(): String {
+        return this.decodeURLQueryComponent()
+    }
+
+    fun String.encodeUrl(): String {
+        return this.encodeURLParameter()
+    }
+
+    @Deprecated(
+        message = "Use Ktor 'Url' naming convention instead.",
+        replaceWith = ReplaceWith("this.encodeUrl()"),
+        level = DeprecationLevel.WARNING,
+    )
+    fun String.encodeUri(): String = encodeUrl()
+
+    @Deprecated(
+        message = "Use Ktor 'Url' naming convention instead.",
+        replaceWith = ReplaceWith("this.decodeUrl()"),
+        level = DeprecationLevel.WARNING,
+    )
+    fun String.decodeUri(): String = decodeUrl()
+}
+

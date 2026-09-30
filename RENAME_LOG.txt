@@ -1,0 +1,768 @@
+=== Flixie rename log started Wed Sep 30 06:50:58 UTC 2026 ===
+Repo: /tmp/cs-clone/cloudstream
+d77c856 Fix: Bug fixes for account (#3224)
+
+=== Phase 1: Inspect namespaces in gradle ===
+app/build.gradle.kts:106:        applicationId = "com.dolus.flixie"
+app/build.gradle.kts:157:            applicationIdSuffix = ".debug"
+app/build.gradle.kts:172:            applicationIdSuffix = ".prerelease"
+app/build.gradle.kts:214:    namespace = "com.dolus.flixie"
+library/build.gradle.kts:27:        namespace = "com.dolus.api"
+shared/build.gradle.kts:12:        namespace = "com.dolus.flixie4"
+Working in /tmp/cs-clone/cloudstream
+
+=== Phase 2: Text replacements in source/config files ===
+  updated: RENAME_LOG.txt
+  updated: desktopApp/build.gradle.kts
+  updated: desktopApp/src/jvmMain/kotlin/com/lagradost/cloudstream4/Main.kt
+  updated: app/build.gradle.kts
+  updated: app/src/test/java/com/lagradost/cloudstream3/SubtitleSelectionTest.kt
+  updated: app/src/androidTest/java/com/lagradost/cloudstream3/SerializationClassTester.kt
+  updated: app/src/androidTest/java/com/lagradost/cloudstream3/ExampleInstrumentedTest.kt
+  updated: app/src/androidTest/java/com/lagradost/cloudstream3/utils/serializers/UriSerializerTest.kt
+  updated: app/src/main/AndroidManifest.xml
+  updated: app/src/main/res/navigation/mobile_navigation.xml
+  updated: app/src/main/res/layout/fragment_testing.xml
+  updated: app/src/main/res/layout/bottom_resultview_preview.xml
+  updated: app/src/main/res/layout/quick_search.xml
+  updated: app/src/main/res/layout/player_custom_layout_tv.xml
+  updated: app/src/main/res/layout/home_scroll_view_tv.xml
+  updated: app/src/main/res/layout/activity_main_tv.xml
+  updated: app/src/main/res/layout/result_episode_large.xml
+  updated: app/src/main/res/layout/download_header_episode.xml
+  updated: app/src/main/res/layout/activity_account_select.xml
+  updated: app/src/main/res/layout/fragment_search_tv.xml
+  updated: app/src/main/res/layout/home_episodes_expanded.xml
+  updated: app/src/main/res/layout/fragment_search.xml
+  updated: app/src/main/res/layout/library_viewpager_page.xml
+  updated: app/src/main/res/layout/fragment_result_tv.xml
+  updated: app/src/main/res/layout/download_button.xml
+  updated: app/src/main/res/layout/player_custom_layout.xml
+  updated: app/src/main/res/layout/download_queue_item.xml
+  updated: app/src/main/res/layout/trailer_custom_layout.xml
+  updated: app/src/main/res/layout/activity_main.xml
+  updated: app/src/main/res/layout/download_child_episode.xml
+  updated: app/src/main/res/layout/result_recommendations.xml
+  updated: app/src/main/res/layout/fragment_result.xml
+  updated: app/src/main/res/layout/bottom_resultview_preview_tv.xml
+  updated: app/src/main/res/layout/result_episode.xml
+  updated: app/src/main/res/layout/fragment_result_swipe.xml
+  updated: app/src/main/res/menu/library_menu.xml
+  updated: app/src/main/java/com/lagradost/cloudstream3/AcraApplication.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/MainActivityScreen.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/CommonActivity.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/DownloaderTestImpl.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/MainActivity.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/CloudStreamApp.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/widget/CenterZoomLayoutManager.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/widget/LinearRecycleViewLayoutManager.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/widget/FlowLayout.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/receivers/VideoDownloadRestartReceiver.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/receivers/PackageInstallerStatusReceiver.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/mvvm/Lifecycle.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/syncproviders/AccountManager.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/syncproviders/SyncRepo.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/syncproviders/BackupAPI.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/syncproviders/SyncAPI.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/syncproviders/SubtitleAPI.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/syncproviders/SubtitleRepo.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/syncproviders/AuthAPI.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/syncproviders/AuthRepo.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/syncproviders/providers/MALApi.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/syncproviders/providers/SubSource.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/syncproviders/providers/KitsuApi.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/syncproviders/providers/Addic7ed.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/syncproviders/providers/AniListApi.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/syncproviders/providers/Subdl.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/syncproviders/providers/LocalList.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/syncproviders/providers/SimklApi.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/syncproviders/providers/OpenSubtitlesApi.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/services/VideoDownloadService.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/services/BackupWorkManager.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/services/SubscriptionWorkManager.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/services/DownloadQueueService.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/services/PackageInstallerService.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/IDisposable.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/CastOptionsProvider.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/PercentageCropImageView.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/DataStoreHelper.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/BackPressedCallbackHelper.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/FillerEpisodeCheck.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/TvChannelUtils.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/UIHelper.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/ImageModuleCoil.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/Vector2.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/BackupUtils.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/BaseComposeFragment.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/TextUtil.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/SubtitleUtils.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/PackageInstaller.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/DataStore.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/SnackbarHelper.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/PowerManagerAPI.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/BiometricAuthenticator.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/CastHelper.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/AppContextUtils.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/TestingUtils.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/ConsistentLiveData.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/IntentHelpers.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/Event.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/SyncUtil.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/ImageUtil.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/InAppUpdater.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/GitInfo.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/SingleSelectionHelper.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/serializers/UriSerializer.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/downloader/DownloadManager.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/downloader/DownloadObjects.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/downloader/DownloadUtils.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/downloader/DownloadQueueManager.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/downloader/DownloadFileManagement.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/videoskip/AnimeSkip.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/videoskip/IntroDbSkip.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/videoskip/AniSkip.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/videoskip/SkipAPI.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/utils/videoskip/TheIntroDBSkip.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/subtitles/AbstractSubtitleEntities.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/subtitles/AbstractSubProvider.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/APIRepository.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/NonFinalAdapterListUpdateCallback.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/WatchType.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/ControllerActivity.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/BaseFragment.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/BaseAdapter.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/WebviewFragment.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/EasterEggMonkeFragment.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/CustomRecyclerViews.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/MiniControllerFragment.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/SettingsUpdates2.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/LogcatAdapter.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/SettingsAccount.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/ApkUpdater.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/SettingsUpdatesScreen.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/SettingsProvidersScreen.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/SettingsGeneralScreen.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/SettingsGeneral2.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/SettingsUIScreen.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/SettingsFragment2.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/SettingsAccountScreen.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/SettingsPlayerScreen.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/SettingsUI.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/SettingsProviders2.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/SettingsFragmentScreen.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/SettingsUpdates.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/SettingsProviders.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/AccountAdapter.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/SettingsGeneral.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/GithubReleases.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/SettingsFragment.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/SettingsUI2.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/GithubViewModel.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/Globals.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/SettingsPlayer.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/SettingsPlayer2.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/SettingsAccount2.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/extensions/PluginsFragment.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/extensions/RepoAdapter.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/extensions/PluginsViewModel.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/extensions/PluginDetailsFragment.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/extensions/ExtensionsViewModel.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/extensions/PluginAdapter.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/extensions/ExtensionsFragment.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/logcat/LogcatDialog.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/logcat/LogcatParser.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/testing/TestResultAdapter.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/testing/TestViewModel.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/testing/TestFragment.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/testing/TestView.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/settings/utils/DirectoryPicker.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/download/DownloadViewModel.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/download/DownloadButtonSetup.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/download/DownloadAdapter.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/download/DownloadFragment.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/download/DownloadChildFragment.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/download/button/BaseFetchButton.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/download/button/DownloadButton.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/download/button/PieFetchButton.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/download/button/ProgressBarAnimation.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/download/queue/DownloadQueueAdapter.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/download/queue/DownloadQueueViewModel.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/download/queue/DownloadQueueFragment.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/home/HomeParentItemAdapter.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/home/HomeFragment.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/home/HomeParentItemAdapterPreview.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/home/HomeViewModel.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/home/HomeChildItemAdapter.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/home/HomeScrollAdapter.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/home/HomeScrollTransformer.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/setup/SetupFragmentLayout.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/setup/SetupFragmentLanguage.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/setup/SetupFragmentExtensions.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/setup/SetupFragmentMedia.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/setup/SetupFragmentProviderLanguage.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/GeneratorPlayer.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/AbstractPlayerFragment.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/CS3IPlayer.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/DownloadFileGenerator.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/CustomSubtitleDecoderFactory.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/PlayerGeneratorViewModel.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/UpdatedDefaultExtractorsFactory.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/Torrent.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/OfflinePlaybackHelper.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/RepoLinkGenerator.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/PlayerPipHelper.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/PlayerView.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/CustomSubripParser.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/LinkGenerator.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/OutlineSpan.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/PlayerGestureHelper.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/FullScreenPlayer.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/FixedNextRenderersFactory.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/PlayerSubtitleHelper.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/SubtitleOffsetItemAdapter.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/ExtractorLinkGenerator.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/DownloadedPlayerActivity.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/IGenerator.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/IPlayer.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/SSLTrustManager.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/PreviewGenerator.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/RoundedBackgroundColorSpan.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/source_priority/QualityDataHelper.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/source_priority/SourceProfileSettingsDialog.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/source_priority/QualityProfileDialog.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/source_priority/ProfilesAdapter.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/source_priority/PriorityAdapter.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/source_priority/SourcePriorityDialog.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/live/LivePreviewTimeBar.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/live/LiveHelper.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/player/live/LiveManager.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/quicksearch/QuickSearchFragment.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/library/LibraryViewModel.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/library/ViewpagerAdapter.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/library/LibraryScrollTransformer.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/library/LibraryFragment.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/library/LoadingPosterAdapter.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/library/PageAdapter.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/subtitles/ChromecastSubtitlesFragment.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/subtitles/SubtitlesFragment.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/subtitles/SubtitlesFragment2.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/subtitles/ChromecastSubtitlesFragment2.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/subtitles/SubtitlesScreen.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/subtitles/ChromecastSubtitlesScreen.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/result/ResultFragment.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/result/LinearListLayout.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/result/ImageAdapter.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/result/EpisodeAdapter.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/result/ResultViewModel2.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/result/ActorAdaptor.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/result/SelectAdaptor.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/result/ResultFragmentPhone.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/result/ResultFragmentTv.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/result/ResultTrailerPlayer.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/result/SyncViewModel.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/search/SearchFragment.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/search/SearchViewModel.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/search/SearchSuggestionApi.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/search/SearchAdaptor.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/search/SearchHistoryAdaptor.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/search/SearchResultBuilder.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/search/SearchSuggestionAdapter.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/search/SearchHelper.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/search/SyncSearchViewModel.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/account/AccountViewModel.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/account/AccountSelectLinearItemDecoration.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/account/AccountAdapter.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/account/AccountHelper.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/ui/account/AccountSelectActivity.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/network/CloudflareKiller.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/network/DdosGuardKiller.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/network/RequestsHelper.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/network/DohProviders.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/plugins/VotingApi.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/plugins/Plugin.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/plugins/PluginManager.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/plugins/RepositoryManager.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/actions/VideoClickAction.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/actions/AlwaysAskAction.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/actions/OpenInAppAction.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/actions/temp/JustPlayerPackage.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/actions/temp/OnlyPlayer.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/actions/temp/NextPlayerPackage.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/actions/temp/ViewM3U8Action.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/actions/temp/MpvPackage.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/actions/temp/WebVideoCastPackage.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/actions/temp/PlayInBrowserAction.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/actions/temp/PlayMirrorAction.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/actions/temp/MpvKtPackage.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/actions/temp/BiglyBTPackage.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/actions/temp/CloudStreamPackage.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/actions/temp/CopyClipboardAction.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/actions/temp/VlcPackage.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/actions/temp/Aria2Package.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/actions/temp/MpvRxPackage.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/actions/temp/LibreTorrentPackage.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/actions/temp/fcast/FcastManager.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/actions/temp/fcast/Packets.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/actions/temp/fcast/FcastAction.kt
+  updated: app/src/main/java/com/lagradost/cloudstream3/actions/temp/fcast/FcastSession.kt
+  updated: library/build.gradle.kts
+  updated: library/src/androidMain/kotlin/com/lagradost/api/Log.kt
+  updated: library/src/androidMain/kotlin/com/lagradost/api/ContextHelper.android.kt
+  updated: library/src/androidMain/kotlin/com/lagradost/cloudstream3/utils/Coroutines.android.kt
+  updated: library/src/androidMain/kotlin/com/lagradost/cloudstream3/utils/SubtitleHelperPlatform.android.kt
+  updated: library/src/androidMain/kotlin/com/lagradost/cloudstream3/network/WebViewResolver.android.kt
+  updated: library/src/jvmMain/kotlin/com/lagradost/api/Log.kt
+  updated: library/src/jvmMain/kotlin/com/lagradost/api/ContextHelper.jvm.kt
+  updated: library/src/jvmMain/kotlin/com/lagradost/cloudstream3/utils/SubtitleHelperPlatform.jvm.kt
+  updated: library/src/jvmMain/kotlin/com/lagradost/cloudstream3/utils/Coroutines.jvm.kt
+  updated: library/src/jvmMain/kotlin/com/lagradost/cloudstream3/network/WebViewResolver.jvm.kt
+  updated: library/src/jvmTest/kotlin/com/lagradost/cloudstream3/utils/M3u8HelperTest.kt
+  updated: library/src/webMain/kotlin/com/lagradost/api/Log.kt
+  updated: library/src/webMain/kotlin/com/lagradost/api/ContextHelper.web.kt
+  updated: library/src/webMain/kotlin/com/lagradost/cloudstream3/extractors/YoutubeExtractor.web.kt
+  updated: library/src/webMain/kotlin/com/lagradost/cloudstream3/mvvm/ArchComponentExt.web.kt
+  updated: library/src/webMain/kotlin/com/lagradost/cloudstream3/utils/SubtitleHelperPlatform.web.kt
+  updated: library/src/webMain/kotlin/com/lagradost/cloudstream3/utils/Coroutines.web.kt
+  updated: library/src/jvmCommonMain/kotlin/com/lagradost/cloudstream3/extractors/YoutubeExtractor.jvmCommon.kt
+  updated: library/src/jvmCommonMain/kotlin/com/lagradost/cloudstream3/mvvm/ArchComponentExt.jvmCommon.kt
+  updated: library/src/jvmCommonMain/kotlin/com/lagradost/cloudstream3/utils/Coroutines.jvmCommon.kt
+  updated: library/src/webTest/kotlin/com/lagradost/cloudstream3/utils/Ignore.web.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/api/Log.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/api/ContextHelper.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/MainActivity.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/MainAPI.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/ParCollections.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Vido.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/DoodExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/StreamTape.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/HDPlayerSystemExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/WatchSB.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Gdriveplayer.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Krakenfiles.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Firestream.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Streamlare.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/GoodstreamExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/YourUpload.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Filesim.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/StreamSilk.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Hxfile.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Filegram.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Embedgram.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/UpstreamExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Uservideo.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Mediafire.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Blogger.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Evolaod.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Vidara.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Fastream.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Streamcash.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/GDMirrorbot.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Flyfile.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Rabbitstream.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/GenericM3U8.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/TRsTXExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Jeniusplay.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/PlayLtXyz.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Vicloud.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/PlayerVoxzer.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/VidMoxyExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/LuluStream.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Up4Stream.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Acefile.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/OkRuExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/SibNetExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/HubCloud.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/M3u8Manifest.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Tantifilm.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Dailymotion.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/StreamSB.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Userscloud.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/InternetArchive.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/OdnoklassnikiExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Sendvid.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/HubuCloud.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/ContentXExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Moviehab.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/StreamWishExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/HotlingerExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/GUpload.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Hexload.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Playmate.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/VidHidePro.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/EmturbovidExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/SobreatsesuypExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Streamplay.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/VideoSeyredExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Mp4Upload.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/StreamoUpload.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/JWPlayer.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/GamoVideo.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/SecvideoOnline.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/VkExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/StreamEmbed.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Filemoon.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Maxstream.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Vidmoly.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Linkbox.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/HDMomPlayerExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/HDStreamAbleExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/SBPlay.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Vidsonic.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Uqload.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Cda.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Vtbe.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/YoutubeExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/CloudMailRuExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Mvidoo.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/MixDrop.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/PeaceMakerstExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Vinovo.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Videa.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/PixelDrainExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/ByseSX.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Wibufile.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/VidhideExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Voe.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Streamhub.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/MailRuExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Vidoza.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Supervideo.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/TauVideoExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Vids.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/CineMMRedirect.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/VidStack.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Gofile.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Zplayer.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/RapidVidExtractor.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/Userload.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/XStreamCdn.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/helper/GogoHelper.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/helper/CryptoJSHelper.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/helper/VstreamhubHelper.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/helper/AesHelper.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/helper/WcoHelper.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/helper/NineAnimeHelper.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/helper/JWPlayerHelper.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/extractors/helper/AsianEmbedHelper.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/mvvm/ArchComponentExt.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/syncproviders/SyncAPI.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/metaproviders/SyncRedirector.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/metaproviders/CrossTmdbProvider.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/metaproviders/TraktProvider.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/metaproviders/MyDramaList.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/metaproviders/TmdbProvider.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/utils/M3u8Helper.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/utils/JsHunter.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/utils/AppDebug.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/utils/Coroutines.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/utils/JsInterpreter.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/utils/SubtitleHelperPlatform.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/utils/AtomicList.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/utils/AppUtils.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/utils/HlsPlaylistParser.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/utils/SubtitleHelper.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/utils/StringUtils.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/utils/UnshortenUrl.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/utils/JsUnpacker.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/utils/ExtractorApi.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/utils/Levenshtein.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/utils/serializers/FloatAsLongSerializer.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/utils/serializers/NullableStringSerializer.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/utils/serializers/NonEmptySerializer.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/utils/serializers/WriteOnlySerializer.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/utils/serializers/JsonTransformSerializer.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/utils/serializers/FloatAsIntSerializer.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/network/WebViewResolver.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/plugins/CloudstreamPlugin.kt
+  updated: library/src/commonMain/kotlin/com/lagradost/cloudstream3/plugins/BasePlugin.kt
+  updated: library/src/commonTest/kotlin/com/lagradost/cloudstream3/EpisodeDateTest.kt
+  updated: library/src/commonTest/kotlin/com/lagradost/cloudstream3/SplitUrlParametersTest.kt
+  updated: library/src/commonTest/kotlin/com/lagradost/cloudstream3/mvvm/ArchComponentExtTest.kt
+  updated: library/src/commonTest/kotlin/com/lagradost/cloudstream3/utils/JsInterpreterTest.kt
+  updated: library/src/commonTest/kotlin/com/lagradost/cloudstream3/utils/StringUtilsTest.kt
+  updated: library/src/commonTest/kotlin/com/lagradost/cloudstream3/utils/Ignore.kt
+  updated: library/src/commonTest/kotlin/com/lagradost/cloudstream3/utils/serializers/SerializersTest.kt
+  updated: shared/build.gradle.kts
+  updated: shared/src/androidMain/kotlin/com/lagradost/cloudstream4/DevicePreferenceStore.android.kt
+  updated: shared/src/androidMain/kotlin/com/lagradost/cloudstream4/theme/DeviceTheme.android.kt
+  updated: shared/src/androidMain/kotlin/com/lagradost/cloudstream4/theme/ColorPreference.kt
+  updated: shared/src/androidMain/kotlin/com/lagradost/cloudstream4/compose/Layout.kt
+  updated: shared/src/androidMain/kotlin/com/lagradost/cloudstream4/compose/ComposeFragment.kt
+  updated: shared/src/androidMain/kotlin/com/mihon/common/preference/DataPreferenceStore.kt
+  updated: shared/src/jvmMain/kotlin/com/lagradost/cloudstream4/DevicePreferenceStore.jvm.kt
+  updated: shared/src/jvmMain/kotlin/com/lagradost/cloudstream4/theme/DeviceTheme.jvm.kt
+  updated: shared/src/commonMain/kotlin/com/lagradost/cloudstream4/DevicePreferenceStore.kt
+  updated: shared/src/commonMain/kotlin/com/lagradost/cloudstream4/theme/DeviceTheme.kt
+  updated: shared/src/commonMain/kotlin/com/lagradost/cloudstream4/theme/Theme.kt
+  updated: shared/src/commonMain/kotlin/com/lagradost/cloudstream4/theme/Font.kt
+  updated: shared/src/commonMain/kotlin/com/lagradost/cloudstream4/theme/Palette.kt
+  updated: shared/src/commonMain/kotlin/com/lagradost/cloudstream4/theme/Scheme.kt
+  updated: shared/src/commonMain/kotlin/com/lagradost/cloudstream4/compose/Screen.kt
+  updated: shared/src/commonMain/kotlin/com/lagradost/cloudstream4/compose/Viewmodel.kt
+  updated: shared/src/commonMain/kotlin/com/lagradost/cloudstream4/compose/Colors.kt
+  updated: shared/src/commonMain/kotlin/com/lagradost/cloudstream4/compose/Dialog.kt
+  updated: shared/src/commonMain/kotlin/com/lagradost/cloudstream4/compose/Modifiers.kt
+  updated: shared/src/commonMain/kotlin/com/lagradost/cloudstream4/compose/ColorDialog.kt
+  updated: shared/src/commonMain/kotlin/com/lagradost/cloudstream4/compose/colorpicker/CircularColorPicker.kt
+  updated: shared/src/commonMain/kotlin/com/lagradost/cloudstream4/compose/colorpicker/HsvColor.kt
+  updated: shared/src/commonMain/kotlin/com/lagradost/cloudstream4/compose/colorpicker/RingColorPicker.kt
+  updated: shared/src/commonMain/kotlin/com/lagradost/cloudstream4/compose/colorpicker/SquareColorPicker.kt
+  updated: shared/src/commonMain/kotlin/com/lagradost/cloudstream4/compose/colorpicker/DoubleColorPicker.kt
+  updated: shared/src/commonMain/kotlin/com/lagradost/cloudstream4/compose/colorpicker/ColorPickerDefaults.kt
+  updated: shared/src/commonMain/kotlin/com/mihon/material/AppBar.kt
+  updated: shared/src/commonMain/kotlin/com/mihon/material/SettingsItems.kt
+  updated: shared/src/commonMain/kotlin/com/mihon/presentation/settings/SearchableSettings.kt
+  updated: shared/src/commonMain/kotlin/com/mihon/presentation/settings/Search.kt
+  updated: shared/src/commonMain/kotlin/com/mihon/presentation/settings/Preference.kt
+  updated: shared/src/commonMain/kotlin/com/mihon/presentation/settings/widget/MultiSelectListPreferenceWidget.kt
+  updated: shared/src/commonMain/kotlin/com/mihon/presentation/settings/widget/ColorPreferenceWidget.kt
+  updated: shared/src/commonMain/kotlin/com/mihon/presentation/settings/widget/ListPreferenceWidget.kt
+  updated: shared/src/commonMain/kotlin/com/mihon/presentation/settings/widget/SwitchPreferenceWidget.kt
+  updated: shared/src/commonMain/kotlin/com/mihon/presentation/settings/widget/BasePreferenceWidget.kt
+  updated: shared/src/commonMain/kotlin/com/mihon/presentation/settings/widget/TextPreferenceWidget.kt
+  updated: shared/src/commonMain/kotlin/com/mihon/presentation/settings/widget/InfoWidget.kt
+  updated: shared/src/commonMain/kotlin/com/mihon/presentation/settings/widget/EditTextPreferenceWidget.kt
+
+Text files updated: 510
+
+=== Phase 3: Directory structure renames ===
+  moved: /tmp/cs-clone/cloudstream/desktopApp/src/jvmMain/kotlin/com/lagradost/cloudstream4 -> /tmp/cs-clone/cloudstream/desktopApp/src/jvmMain/kotlin/com/lagradost/flixie4
+  moved: /tmp/cs-clone/cloudstream/desktopApp/src/jvmMain/kotlin/com/lagradost -> /tmp/cs-clone/cloudstream/desktopApp/src/jvmMain/kotlin/com/dolus
+  moved: /tmp/cs-clone/cloudstream/app/src/test/java/com/lagradost/cloudstream3 -> /tmp/cs-clone/cloudstream/app/src/test/java/com/lagradost/flixie
+  moved: /tmp/cs-clone/cloudstream/app/src/test/java/com/lagradost -> /tmp/cs-clone/cloudstream/app/src/test/java/com/dolus
+  moved: /tmp/cs-clone/cloudstream/app/src/androidTest/java/com/lagradost/cloudstream3 -> /tmp/cs-clone/cloudstream/app/src/androidTest/java/com/lagradost/flixie
+  moved: /tmp/cs-clone/cloudstream/app/src/androidTest/java/com/lagradost -> /tmp/cs-clone/cloudstream/app/src/androidTest/java/com/dolus
+  moved: /tmp/cs-clone/cloudstream/app/src/main/java/com/lagradost/cloudstream3 -> /tmp/cs-clone/cloudstream/app/src/main/java/com/lagradost/flixie
+  moved: /tmp/cs-clone/cloudstream/app/src/main/java/com/lagradost -> /tmp/cs-clone/cloudstream/app/src/main/java/com/dolus
+  moved: /tmp/cs-clone/cloudstream/library/src/androidMain/kotlin/com/lagradost/cloudstream3 -> /tmp/cs-clone/cloudstream/library/src/androidMain/kotlin/com/lagradost/flixie
+  moved: /tmp/cs-clone/cloudstream/library/src/androidMain/kotlin/com/lagradost -> /tmp/cs-clone/cloudstream/library/src/androidMain/kotlin/com/dolus
+  moved: /tmp/cs-clone/cloudstream/library/src/jvmMain/kotlin/com/lagradost/cloudstream3 -> /tmp/cs-clone/cloudstream/library/src/jvmMain/kotlin/com/lagradost/flixie
+  moved: /tmp/cs-clone/cloudstream/library/src/jvmMain/kotlin/com/lagradost -> /tmp/cs-clone/cloudstream/library/src/jvmMain/kotlin/com/dolus
+  moved: /tmp/cs-clone/cloudstream/library/src/jvmTest/kotlin/com/lagradost/cloudstream3 -> /tmp/cs-clone/cloudstream/library/src/jvmTest/kotlin/com/lagradost/flixie
+  moved: /tmp/cs-clone/cloudstream/library/src/jvmTest/kotlin/com/lagradost -> /tmp/cs-clone/cloudstream/library/src/jvmTest/kotlin/com/dolus
+  moved: /tmp/cs-clone/cloudstream/library/src/webMain/kotlin/com/lagradost/cloudstream3 -> /tmp/cs-clone/cloudstream/library/src/webMain/kotlin/com/lagradost/flixie
+  moved: /tmp/cs-clone/cloudstream/library/src/webMain/kotlin/com/lagradost -> /tmp/cs-clone/cloudstream/library/src/webMain/kotlin/com/dolus
+  moved: /tmp/cs-clone/cloudstream/library/src/jvmCommonMain/kotlin/com/lagradost/cloudstream3 -> /tmp/cs-clone/cloudstream/library/src/jvmCommonMain/kotlin/com/lagradost/flixie
+  moved: /tmp/cs-clone/cloudstream/library/src/jvmCommonMain/kotlin/com/lagradost -> /tmp/cs-clone/cloudstream/library/src/jvmCommonMain/kotlin/com/dolus
+  moved: /tmp/cs-clone/cloudstream/library/src/webTest/kotlin/com/lagradost/cloudstream3 -> /tmp/cs-clone/cloudstream/library/src/webTest/kotlin/com/lagradost/flixie
+  moved: /tmp/cs-clone/cloudstream/library/src/webTest/kotlin/com/lagradost -> /tmp/cs-clone/cloudstream/library/src/webTest/kotlin/com/dolus
+  moved: /tmp/cs-clone/cloudstream/library/src/commonMain/kotlin/com/lagradost/cloudstream3 -> /tmp/cs-clone/cloudstream/library/src/commonMain/kotlin/com/lagradost/flixie
+  moved: /tmp/cs-clone/cloudstream/library/src/commonMain/kotlin/com/lagradost -> /tmp/cs-clone/cloudstream/library/src/commonMain/kotlin/com/dolus
+  moved: /tmp/cs-clone/cloudstream/library/src/commonTest/kotlin/com/lagradost/cloudstream3 -> /tmp/cs-clone/cloudstream/library/src/commonTest/kotlin/com/lagradost/flixie
+  moved: /tmp/cs-clone/cloudstream/library/src/commonTest/kotlin/com/lagradost -> /tmp/cs-clone/cloudstream/library/src/commonTest/kotlin/com/dolus
+  moved: /tmp/cs-clone/cloudstream/shared/src/androidMain/kotlin/com/lagradost/cloudstream4 -> /tmp/cs-clone/cloudstream/shared/src/androidMain/kotlin/com/lagradost/flixie4
+  moved: /tmp/cs-clone/cloudstream/shared/src/androidMain/kotlin/com/lagradost -> /tmp/cs-clone/cloudstream/shared/src/androidMain/kotlin/com/dolus
+  moved: /tmp/cs-clone/cloudstream/shared/src/jvmMain/kotlin/com/lagradost/cloudstream4 -> /tmp/cs-clone/cloudstream/shared/src/jvmMain/kotlin/com/lagradost/flixie4
+  moved: /tmp/cs-clone/cloudstream/shared/src/jvmMain/kotlin/com/lagradost -> /tmp/cs-clone/cloudstream/shared/src/jvmMain/kotlin/com/dolus
+  moved: /tmp/cs-clone/cloudstream/shared/src/commonMain/kotlin/com/lagradost/cloudstream4 -> /tmp/cs-clone/cloudstream/shared/src/commonMain/kotlin/com/lagradost/flixie4
+  moved: /tmp/cs-clone/cloudstream/shared/src/commonMain/kotlin/com/lagradost -> /tmp/cs-clone/cloudstream/shared/src/commonMain/kotlin/com/dolus
+
+=== Phase 4: Verify key packages ===
+Files still containing old names: 11
+  RENAME_LOG.txt  (lagradost=507, cloudstream3/4=470)
+  app/src/main/res/xml/settings_general.xml  (lagradost=2, cloudstream3/4=0)
+  app/src/main/java/com/dolus/flixie/services/BackupWorkManager.kt  (lagradost=0, cloudstream3/4=1)
+  app/src/main/java/com/dolus/flixie/services/SubscriptionWorkManager.kt  (lagradost=0, cloudstream3/4=1)
+  app/src/main/java/com/dolus/flixie/services/DownloadQueueService.kt  (lagradost=0, cloudstream3/4=1)
+  app/src/main/java/com/dolus/flixie/services/PackageInstallerService.kt  (lagradost=0, cloudstream3/4=1)
+  app/src/main/java/com/dolus/flixie/utils/downloader/DownloadManager.kt  (lagradost=0, cloudstream3/4=1)
+  app/src/main/java/com/dolus/flixie/ui/settings/SettingsGeneralScreen.kt  (lagradost=2, cloudstream3/4=0)
+  app/src/main/java/com/dolus/flixie/ui/player/CustomSubtitleDecoderFactory.kt  (lagradost=1, cloudstream3/4=0)
+  app/src/main/java/com/dolus/flixie/plugins/PluginManager.kt  (lagradost=0, cloudstream3/4=1)
+  shared/readme.md  (lagradost=1, cloudstream3/4=0)
+
+Done with core rename.
+
+=== Phase 5: Fix remaining directory structure ===
+
+=== Phase 6: Clean remaining old name references ===
+--- app/src/main/res/xml/settings_general.xml ---
+95:            app:summary="https://github.com/LagradOst/QuickNovel">
+98:                android:data="https://github.com/LagradOst/QuickNovel" />
+--- app/src/main/java/com/dolus/flixie/services/BackupWorkManager.kt ---
+20:const val BACKUP_CHANNEL_ID = "cloudstream3.backups"
+--- app/src/main/java/com/dolus/flixie/services/SubscriptionWorkManager.kt ---
+29:const val SUBSCRIPTION_CHANNEL_ID = "cloudstream3.subscriptions"
+--- app/src/main/java/com/dolus/flixie/services/DownloadQueueService.kt ---
+51:        const val DOWNLOAD_QUEUE_CHANNEL_ID = "cloudstream3.download.queue"
+--- app/src/main/java/com/dolus/flixie/services/PackageInstallerService.kt ---
+176:        const val UPDATE_CHANNEL_ID = "cloudstream3.updates"
+--- app/src/main/java/com/dolus/flixie/utils/downloader/DownloadManager.kt ---
+109:const val DOWNLOAD_CHANNEL_ID = "cloudstream3.general"
+--- app/src/main/java/com/dolus/flixie/ui/settings/SettingsGeneralScreen.kt ---
+256:                        subtitle = "https://github.com/LagradOst/QuickNovel",
+259:                            CloudStreamApp.openBrowser("https://github.com/LagradOst/QuickNovel")
+--- app/src/main/java/com/dolus/flixie/ui/player/CustomSubtitleDecoderFactory.kt ---
+240:        //https://github.com/LagradOst/CloudStream-2/blob/ddd774ee66810137ff7bd65dae70bcf3ba2d2489/CloudStreamForms/CloudStreamForms/Script/MainChrome.cs#L388
+--- app/src/main/java/com/dolus/flixie/plugins/PluginManager.kt ---
+73:const val EXTENSIONS_CHANNEL_ID = "cloudstream3.extensions"
+187:        Environment.getExternalStorageDirectory().absolutePath + "/Cloudstream3/"
+--- shared/readme.md ---
+103:Therefore, I (LagradOst) will not accept or allow any pull requests concering the Compose rewrite
+=== Phase 6b: Fix channel IDs and storage path ===
+  fixed: app/src/main/java/com/dolus/flixie/services/BackupWorkManager.kt
+  fixed: app/src/main/java/com/dolus/flixie/services/SubscriptionWorkManager.kt
+  fixed: app/src/main/java/com/dolus/flixie/services/DownloadQueueService.kt
+  fixed: app/src/main/java/com/dolus/flixie/services/PackageInstallerService.kt
+  fixed: app/src/main/java/com/dolus/flixie/utils/downloader/DownloadManager.kt
+  fixed: app/src/main/java/com/dolus/flixie/plugins/PluginManager.kt
+
+=== Verify Gradle applicationId/namespace ===
+  app/build.gradle.kts: applicationId = "com.dolus.flixie"
+  app/build.gradle.kts: applicationIdSuffix = ".debug"
+  app/build.gradle.kts: applicationIdSuffix = ".prerelease"
+  app/build.gradle.kts: namespace = "com.dolus.flixie"
+  library/build.gradle.kts: namespace = "com.dolus.api"
+  shared/build.gradle.kts: namespace = "com.dolus.flixie4"
+
+=== Phase 7: Replace launcher icons ===
+'/tmp/flixie-work/assets/Android/res/mipmap-mdpi/ic_launcher.png' -> 'app/src/main/res/mipmap-mdpi/ic_launcher.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-mdpi/ic_launcher_round.png' -> 'app/src/main/res/mipmap-mdpi/ic_launcher_round.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-hdpi/ic_launcher.png' -> 'app/src/main/res/mipmap-hdpi/ic_launcher.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-hdpi/ic_launcher_round.png' -> 'app/src/main/res/mipmap-hdpi/ic_launcher_round.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-xhdpi/ic_launcher.png' -> 'app/src/main/res/mipmap-xhdpi/ic_launcher.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-xhdpi/ic_launcher_round.png' -> 'app/src/main/res/mipmap-xhdpi/ic_launcher_round.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-xxhdpi/ic_launcher.png' -> 'app/src/main/res/mipmap-xxhdpi/ic_launcher.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-xxhdpi/ic_launcher_round.png' -> 'app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-xxxhdpi/ic_launcher.png' -> 'app/src/main/res/mipmap-xxxhdpi/ic_launcher.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-xxxhdpi/ic_launcher_round.png' -> 'app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-mdpi/ic_launcher.png' -> 'app/src/debug/res/mipmap-mdpi/ic_launcher.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-mdpi/ic_launcher_round.png' -> 'app/src/debug/res/mipmap-mdpi/ic_launcher_round.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-hdpi/ic_launcher.png' -> 'app/src/debug/res/mipmap-hdpi/ic_launcher.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-hdpi/ic_launcher_round.png' -> 'app/src/debug/res/mipmap-hdpi/ic_launcher_round.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-xhdpi/ic_launcher.png' -> 'app/src/debug/res/mipmap-xhdpi/ic_launcher.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-xhdpi/ic_launcher_round.png' -> 'app/src/debug/res/mipmap-xhdpi/ic_launcher_round.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-xxhdpi/ic_launcher.png' -> 'app/src/debug/res/mipmap-xxhdpi/ic_launcher.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-xxhdpi/ic_launcher_round.png' -> 'app/src/debug/res/mipmap-xxhdpi/ic_launcher_round.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-xxxhdpi/ic_launcher.png' -> 'app/src/debug/res/mipmap-xxxhdpi/ic_launcher.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-xxxhdpi/ic_launcher_round.png' -> 'app/src/debug/res/mipmap-xxxhdpi/ic_launcher_round.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-mdpi/ic_launcher.png' -> 'app/src/prerelease/res/mipmap-mdpi/ic_launcher.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-mdpi/ic_launcher_round.png' -> 'app/src/prerelease/res/mipmap-mdpi/ic_launcher_round.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-hdpi/ic_launcher.png' -> 'app/src/prerelease/res/mipmap-hdpi/ic_launcher.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-hdpi/ic_launcher_round.png' -> 'app/src/prerelease/res/mipmap-hdpi/ic_launcher_round.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-xhdpi/ic_launcher.png' -> 'app/src/prerelease/res/mipmap-xhdpi/ic_launcher.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-xhdpi/ic_launcher_round.png' -> 'app/src/prerelease/res/mipmap-xhdpi/ic_launcher_round.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-xxhdpi/ic_launcher.png' -> 'app/src/prerelease/res/mipmap-xxhdpi/ic_launcher.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-xxhdpi/ic_launcher_round.png' -> 'app/src/prerelease/res/mipmap-xxhdpi/ic_launcher_round.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-xxxhdpi/ic_launcher.png' -> 'app/src/prerelease/res/mipmap-xxxhdpi/ic_launcher.png'
+'/tmp/flixie-work/assets/Android/res/mipmap-xxxhdpi/ic_launcher_round.png' -> 'app/src/prerelease/res/mipmap-xxxhdpi/ic_launcher_round.png'
+'/tmp/flixie-work/assets/Android/play_store_512.png' -> 'app/src/main/ic_launcher-playstore.png'
+'/tmp/flixie-work/assets/Android/play_store_512.png' -> 'app/src/debug/ic_launcher-playstore.png'
+'/tmp/flixie-work/assets/Android/play_store_512.png' -> 'app/src/prerelease/ic_launcher-playstore.png'
+Icons replaced.
+total 96
+drwxr-xr-x  2 root root  4096 Sep 30 06:50 .
+drwxr-xr-x 82 root root  4096 Sep 30 06:50 ..
+-rw-r--r--  1 root root 47524 Sep 30 06:52 ic_launcher.png
+-rw-r--r--  1 root root 40900 Sep 30 06:52 ic_launcher_round.png
+
+=== Phase 8: Update app display name ===
+app/src/main/res/values/strings.xml:30:    <string name="app_name">CloudStream</string>
+app/src/main/res/values/strings.xml:31:    <string name="play_with_app_name">Play with CloudStream</string>
+app/src/main/res/values/strings.xml:530:    <string name="blank_repo_message">CloudStream has no sites installed by default. You need to install the sites from repositories.
+app/src/main/res/values/strings.xml:536:    <string name="download_all_plugins_from_repo">Warning: CloudStream does not take any responsibility for using third-party extensions and does not provide any support for them!</string>
+app/src/main/res/values/strings.xml:588:        TV shows, CloudStream needs permission to run in background. By pressing "OK", you\'ll be shown a request dialog.
+app/src/main/res/values/strings.xml:592:    <string name="app_info_intent_error">Unable to open CloudStream\'s App info.</string>
+app/src/main/res/values/strings.xml:702:    <string name="biometric_authentication_title">Unlock CloudStream</string>
+app/src/main/res/values/strings.xml:708:    <string name="biometric_warning">Your CloudStream data has been backed up now. Although the possibility of this is very low, all devices can behave differently. In the rare case, that you get locked out from accessing the app, clear the app data completely and restore from a backup. We are very sorry for any inconvenience arising from this.</string>
+app/src/main/res/values/strings.xml:710:    <string name="cs3wiki">CloudStream Wiki</string>
+---
+30:    <string name="app_name">CloudStream</string>
+31:    <string name="play_with_app_name">Play with CloudStream</string>
+530:    <string name="blank_repo_message">CloudStream has no sites installed by default. You need to install the sites from repositories.
+536:    <string name="download_all_plugins_from_repo">Warning: CloudStream does not take any responsibility for using third-party extensions and does not provide any support for them!</string>
+588:        TV shows, CloudStream needs permission to run in background. By pressing "OK", you\'ll be shown a request dialog.
+592:    <string name="app_info_intent_error">Unable to open CloudStream\'s App info.</string>
+702:    <string name="biometric_authentication_title">Unlock CloudStream</string>
+708:    <string name="biometric_warning">Your CloudStream data has been backed up now. Although the possibility of this is very low, all devices can behave differently. In the rare case, that you get locked out from accessing the app, clear the app data completely and restore from a backup. We are very sorry for any inconvenience arising from this.</string>
+710:    <string name="cs3wiki">CloudStream Wiki</string>
+Updated main strings.xml app names
+Updated 47 locale string files (app_name)
+Created .github/workflows/build-apk.yml
+
+=== Phase 9: Final verification ===
+applicationId/namespace:
+app/build.gradle.kts:106:        applicationId = "com.dolus.flixie"
+app/build.gradle.kts:157:            applicationIdSuffix = ".debug"
+app/build.gradle.kts:172:            applicationIdSuffix = ".prerelease"
+app/build.gradle.kts:214:    namespace = "com.dolus.flixie"
+library/build.gradle.kts:27:        namespace = "com.dolus.api"
+shared/build.gradle.kts:12:        namespace = "com.dolus.flixie4"
+Sample package declarations:
+package com.dolus.api
+package com.dolus.flixie
+package com.dolus.flixie.actions
+package com.dolus.flixie.actions.temp
+package com.dolus.flixie.actions.temp.fcast
+package com.dolus.flixie.extractors
+package com.dolus.flixie.extractors.helper
+package com.dolus.flixie.metaproviders
+package com.dolus.flixie.mvvm
+package com.dolus.flixie.network
+package com.dolus.flixie.plugins
+package com.dolus.flixie.receivers
+package com.dolus.flixie.services
+package com.dolus.flixie.subtitles
+package com.dolus.flixie.syncproviders
+package com.dolus.flixie.syncproviders.providers
+package com.dolus.flixie.ui
+package com.dolus.flixie.ui.account
+package com.dolus.flixie.ui.download
+package com.dolus.flixie.ui.download.button
+package com.dolus.flixie.ui.download.queue
+package com.dolus.flixie.ui.home
+package com.dolus.flixie.ui.library
+package com.dolus.flixie.ui.player
+package com.dolus.flixie.ui.player.live
+
+Any remaining com.lagradost in kt/xml/kts (should be empty or only external):
+
+Workflows:
+build-apk.yml
+build_to_archive.yml
+generate_dokka.yml
+instrumented-tests.yml
+prerelease.yml
+pull_request.yml
+update_locales.yml
+App name:
+    <string name="app_name">Flixie</string>
+Updated README title/intro
+First 15 lines of README:
+# Flixie
+
+**⚠️ Warning: By default, this app doesn't provide any video sources; you have to install extensions to add functionality to the app.**
+<p align="left"><a href="https://github.com/recloudstream/cloudstream/releases/download/pre-release/app-prerelease-release.apk"><img src=".github/images/download-cloudstream-pre.png" alt="Download Cloudstream Pre-Release" width=430/></a></p>
+
+[![Discord](https://invidget.switchblade.xyz/5Hus6fM)](https://discord.gg/5Hus6fM)
+
+
+## Table of Contents: 
++ [About Us:](#about_us)
++ [Installation Steps:](#install_rules)
++ [Contributing:](#contributing)
++ [Issues:](#issues)
+  + [Bugs Reports:](#bug_report)
+  + [Enhancement:](#enhancment)
+
+=== Phase 10: Summary ===
+Package rename completed: com.lagradost.cloudstream3 -> com.dolus.flixie
+com.lagradost.cloudstream4 -> com.dolus.flixie4
+com.lagradost.api -> com.dolus.api
+App display name: Flixie
+Icons: replaced from AppAssets_2026-09-29.zip
+Workflow added: .github/workflows/build-apk.yml
+Log finished: Wed Sep 30 06:53:04 UTC 2026
+
+=== Final review 2026-09-30T08:20Z ===
+- No leftover com.lagradost imports or package declarations in .kt/.kts/.xml
+- Package paths match declarations (except intentional androidx.media3 extractor)
+- Live endpoints LEFT INTACT on purpose:
+  * GitHub updater: api.github.com/repos/recloudstream/cloudstream
+  * Connectivity: raw.githubusercontent.com/recloudstream/.github/master/connectivitycheck
+  * Repo scheme: cloudstreamrepo:// and https://cs.repo
+  * Player/share schemes: cloudstreamplayer, cloudstreamapp, cloudstreamsearch, csshare
+  * AniList / Kitsu / MAL / AniSkip / AnimeSkip / IntroDB / Countify
+- Only corrupted runtime-adjacent string found was a COMMENT github path; restored
+- CI: assembleRelease is invalid with flavors; workflow now assembleStableRelease
+- com.mihon.* left unchanged
