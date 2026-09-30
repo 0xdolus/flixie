@@ -129,7 +129,7 @@ import com.dolus.flixie.utils.downloader.DownloadUtils.getImageBitmapFromUrl
 import com.dolus.flixie.utils.setText
 import com.dolus.flixie.utils.txt
 import com.dolus.flixie.utils.videoskip.VideoSkipStamp
-import com.dolus.safefile.SafeFile
+import com.lagradost.safefile.SafeFile
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive

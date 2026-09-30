@@ -95,7 +95,7 @@ object FillerEpisodeCheck {
         }
         
         /** The entire "database" is stored as a json file we can parse */
-        val stream: InputStream = com.dolus.AnimeDB.getDatabaseStream()!!
+        val stream: InputStream = com.lagradost.AnimeDB.getDatabaseStream()!!
         val text = stream.reader().readText()
 
         val allMedia = parseJson<Array<CombinedMedia>>(text)

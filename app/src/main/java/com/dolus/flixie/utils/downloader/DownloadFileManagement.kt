@@ -8,8 +8,8 @@ import com.dolus.flixie.R
 import com.dolus.flixie.TvType
 import com.dolus.flixie.getFolderPrefix
 import com.dolus.flixie.isEpisodeBased
-import com.dolus.safefile.MediaFileContentType
-import com.dolus.safefile.SafeFile
+import com.lagradost.safefile.MediaFileContentType
+import com.lagradost.safefile.SafeFile
 
 object DownloadFileManagement {
     private const val RESERVED_CHARS = "|\\?*<\":>+[]/\'"

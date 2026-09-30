@@ -35,8 +35,8 @@ import com.dolus.flixie.utils.downloader.DownloadQueueManager.QUEUE_KEY
 import com.dolus.flixie.utils.downloader.VideoDownloadManager.KEY_DOWNLOAD_INFO
 import com.dolus.flixie.utils.downloader.VideoDownloadManager.KEY_RESUME_IN_QUEUE
 import com.dolus.flixie.utils.downloader.VideoDownloadManager.KEY_RESUME_PACKAGES
-import com.dolus.safefile.MediaFileContentType
-import com.dolus.safefile.SafeFile
+import com.lagradost.safefile.MediaFileContentType
+import com.lagradost.safefile.SafeFile
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import okhttp3.internal.closeQuietly

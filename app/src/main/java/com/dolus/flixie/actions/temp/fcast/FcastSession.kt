@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.annotation.WorkerThread
 import com.dolus.flixie.utils.AppUtils.toJson
 import com.dolus.flixie.utils.Coroutines.ioSafe
-import com.dolus.safefile.closeQuietly
+import com.lagradost.safefile.closeQuietly
 import java.io.DataOutputStream
 import java.net.Socket
 import kotlin.jvm.Throws

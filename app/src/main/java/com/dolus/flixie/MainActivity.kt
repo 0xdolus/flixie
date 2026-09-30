@@ -180,7 +180,7 @@ import com.dolus.flixie.utils.setText
 import com.dolus.flixie.utils.setTextHtml
 import com.dolus.flixie.utils.txt
 import com.dolus.flixie4.theme.CloudStreamTheme
-import com.dolus.safefile.SafeFile
+import com.lagradost.safefile.SafeFile
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.sync.Mutex

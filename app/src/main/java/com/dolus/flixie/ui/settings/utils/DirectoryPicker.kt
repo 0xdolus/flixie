@@ -5,7 +5,7 @@ import android.net.Uri
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import com.dolus.flixie.CloudStreamApp
-import com.dolus.safefile.SafeFile
+import com.lagradost.safefile.SafeFile
 
 fun Fragment.getChooseFolderLauncher(dirSelected: (uri: Uri?, path: String?) -> Unit) =
     registerForActivityResult(ActivityResultContracts.OpenDocumentTree()) { uri ->

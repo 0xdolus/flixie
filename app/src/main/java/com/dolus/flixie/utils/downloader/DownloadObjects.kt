@@ -12,7 +12,7 @@ import com.dolus.flixie.ui.result.ResultEpisode
 import com.dolus.flixie.utils.ExtractorLink
 import com.dolus.flixie.utils.serializers.UriSerializer
 import com.dolus.flixie.utils.serializers.WriteOnlySerializer
-import com.dolus.safefile.SafeFile
+import com.lagradost.safefile.SafeFile
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.KeepGeneratedSerializer
 import kotlinx.serialization.SerialName

@@ -10,7 +10,7 @@ import com.dolus.flixie.actions.temp.CloudStreamPackage
 import com.dolus.flixie.utils.AppUtils.tryParseJson
 import com.dolus.flixie.utils.DataStoreHelper
 import com.dolus.flixie.utils.UIHelper.navigate
-import com.dolus.safefile.SafeFile
+import com.lagradost.safefile.SafeFile
 
 object OfflinePlaybackHelper {
     /**

@@ -38,7 +38,7 @@ import com.dolus.flixie4.compose.PHONE
 import com.dolus.flixie4.compose.isLayout
 import com.dolus.flixie4.rememberAppSettings
 import com.dolus.flixie4.theme.CloudStreamPreviewTheme
-import com.dolus.safefile.SafeFile
+import com.lagradost.safefile.SafeFile
 import com.mihon.presentation.settings.Preference
 import com.mihon.presentation.settings.SearchableSettings
 import com.mihon.presentation.settings.collectAsState

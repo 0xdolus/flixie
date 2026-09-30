@@ -28,7 +28,7 @@ import com.dolus.flixie.utils.InAppUpdater.installPreReleaseIfNeeded
 import com.dolus.flixie.utils.UIHelper.navigate
 import com.dolus.flixie4.AppSettings
 import com.dolus.flixie4.rememberAppSettings
-import com.dolus.safefile.SafeFile
+import com.lagradost.safefile.SafeFile
 import com.mihon.presentation.settings.Preference
 import com.mihon.presentation.settings.SearchableSettings
 import com.mihon.presentation.settings.collectAsState
