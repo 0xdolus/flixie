@@ -6,8 +6,8 @@ import androidx.annotation.AnyThread
 import com.dolus.flixie.app
 import com.dolus.flixie.mvvm.debugWarning
 import com.dolus.flixie.mvvm.safe
-import com.dolus.nicehttp.Requests.Companion.await
-import com.dolus.nicehttp.cookies
+import com.lagradost.nicehttp.Requests.Companion.await
+import com.lagradost.nicehttp.cookies
 import kotlinx.coroutines.runBlocking
 import okhttp3.Headers
 import okhttp3.Interceptor

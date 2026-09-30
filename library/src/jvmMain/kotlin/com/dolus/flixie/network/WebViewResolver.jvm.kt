@@ -2,7 +2,7 @@ package com.dolus.flixie.network
 
 import com.dolus.flixie.mvvm.debugException
 import com.dolus.flixie.mvvm.logError
-import com.dolus.nicehttp.requestCreator
+import com.lagradost.nicehttp.requestCreator
 import okhttp3.Interceptor
 import okhttp3.Request
 import okhttp3.Response

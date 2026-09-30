@@ -6,8 +6,8 @@ import com.dolus.flixie.Prerelease
 import com.dolus.flixie.R
 import com.dolus.flixie.USER_AGENT
 import com.dolus.flixie.mvvm.safe
-import com.dolus.nicehttp.Requests
-import com.dolus.nicehttp.ignoreAllSSLErrors
+import com.lagradost.nicehttp.Requests
+import com.lagradost.nicehttp.ignoreAllSSLErrors
 import okhttp3.Cache
 import okhttp3.Headers
 import okhttp3.Headers.Companion.toHeaders

@@ -3,7 +3,7 @@ package com.dolus.flixie.ui.search
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.dolus.flixie.app
 import com.dolus.flixie.mvvm.logError
-import com.dolus.nicehttp.NiceResponse
+import com.lagradost.nicehttp.NiceResponse
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 

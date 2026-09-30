@@ -2,8 +2,8 @@ package com.dolus.flixie.network
 
 import androidx.annotation.AnyThread
 import com.dolus.flixie.app
-import com.dolus.nicehttp.Requests
-import com.dolus.nicehttp.cookies
+import com.lagradost.nicehttp.Requests
+import com.lagradost.nicehttp.cookies
 import kotlinx.coroutines.runBlocking
 import okhttp3.Interceptor
 import okhttp3.Request

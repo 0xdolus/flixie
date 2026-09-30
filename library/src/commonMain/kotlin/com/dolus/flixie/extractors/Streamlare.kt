@@ -8,7 +8,7 @@ import com.dolus.flixie.utils.ExtractorLinkType
 import com.dolus.flixie.utils.INFER_TYPE
 import com.dolus.flixie.utils.newExtractorLink
 import com.dolus.flixie.utils.Qualities
-import com.dolus.nicehttp.RequestBodyTypes
+import com.lagradost.nicehttp.RequestBodyTypes
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import okhttp3.MediaType.Companion.toMediaTypeOrNull

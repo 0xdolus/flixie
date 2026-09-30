@@ -2,8 +2,8 @@ package com.dolus.flixie
 
 import com.dolus.flixie.utils.AppUtils.parseJson
 import com.dolus.flixie.utils.AppUtils.toJson
-import com.dolus.nicehttp.Requests
-import com.dolus.nicehttp.ResponseParser
+import com.lagradost.nicehttp.Requests
+import com.lagradost.nicehttp.ResponseParser
 import kotlin.reflect.KClass
 
 // Short name for requests client to make it nicer to use

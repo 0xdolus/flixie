@@ -9,7 +9,7 @@ import com.dolus.flixie.utils.ExtractorApi
 import com.dolus.flixie.utils.ExtractorLink
 import com.dolus.flixie.utils.ExtractorLinkType
 import com.dolus.flixie.utils.newExtractorLink
-import com.dolus.nicehttp.NiceResponse
+import com.lagradost.nicehttp.NiceResponse
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.jsonPrimitive
 

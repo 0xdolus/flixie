@@ -3,7 +3,7 @@ package com.dolus.flixie.utils
 import com.dolus.flixie.app
 import com.dolus.flixie.base64Decode
 import com.dolus.flixie.utils.StringUtils.decodeUrl
-import com.dolus.nicehttp.NiceResponse
+import com.lagradost.nicehttp.NiceResponse
 import io.ktor.http.Url
 
 // Code heavily based on unshortenit.py form kodiondemand /addon

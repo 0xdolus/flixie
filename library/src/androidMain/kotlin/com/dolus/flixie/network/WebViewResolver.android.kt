@@ -14,7 +14,7 @@ import com.dolus.flixie.utils.Coroutines.atomicListOf
 import com.dolus.flixie.utils.Coroutines.main
 import com.dolus.flixie.utils.Coroutines.mainWork
 import com.dolus.flixie.utils.Coroutines.runOnMainThread
-import com.dolus.nicehttp.requestCreator
+import com.lagradost.nicehttp.requestCreator
 import io.ktor.http.Url
 import io.ktor.http.decodeURLPart
 import kotlinx.coroutines.delay

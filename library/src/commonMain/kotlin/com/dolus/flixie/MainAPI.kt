@@ -21,7 +21,7 @@ import com.dolus.flixie.utils.Coroutines.atomicListOf
 import com.dolus.flixie.utils.Coroutines.mainWork
 import com.dolus.flixie.utils.SubtitleHelper.fromCodeToLangTagIETF
 import com.dolus.flixie.utils.SubtitleHelper.fromLanguageToTagIETF
-import com.dolus.nicehttp.RequestBodyTypes
+import com.lagradost.nicehttp.RequestBodyTypes
 import io.ktor.http.Url
 import io.ktor.http.URLBuilder
 import io.ktor.http.encodedPath
