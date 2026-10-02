@@ -1,9 +1,9 @@
-package com.dolus.flixie
+package com.lagradost.cloudstream3
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.dolus.flixie.SkipSerializationTest
-import com.dolus.flixie.utils.AppUtils.toJson
+import com.lagradost.cloudstream3.SkipSerializationTest
+import com.lagradost.cloudstream3.utils.AppUtils.toJson
 import dalvik.system.DexFile
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.InternalSerializationApi

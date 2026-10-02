@@ -144,7 +144,7 @@
 
             </LinearLayout>
 
-            <com.dolus.flixie.ui.download.button.PieFetchButton
+            <com.lagradost.cloudstream3.ui.download.button.PieFetchButton
                 android:id="@+id/download_button"
                 android:layout_width="@dimen/download_size"
                 android:layout_height="@dimen/download_size"

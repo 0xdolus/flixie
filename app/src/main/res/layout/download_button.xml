@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.dolus.flixie.ui.download.button.DownloadButton
+<com.lagradost.cloudstream3.ui.download.button.DownloadButton
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/result_download_movie"

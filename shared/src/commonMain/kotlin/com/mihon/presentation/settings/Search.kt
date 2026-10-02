@@ -20,8 +20,8 @@ import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import com.dolus.flixie4.generated.resources.Res
-import com.dolus.flixie4.generated.resources.no_results_found
+import com.lagradost.cloudstream4.generated.resources.Res
+import com.lagradost.cloudstream4.generated.resources.no_results_found
 import com.mihon.presentation.secondaryItemAlpha
 import com.mihon.presentation.settings.widget.TextPreferenceWidget
 import kotlinx.collections.immutable.ImmutableList

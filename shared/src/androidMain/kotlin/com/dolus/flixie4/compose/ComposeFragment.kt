@@ -1,4 +1,4 @@
-package com.dolus.flixie4.compose
+package com.lagradost.cloudstream4.compose
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,10 +10,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.ViewCompositionStrategy
-import com.dolus.flixie4.rememberAppSettings
-import com.dolus.flixie4.theme.CloudStreamTheme
-import com.dolus.flixie4.theme.perfToColor
-import com.dolus.flixie4.theme.perfToMode
+import com.lagradost.cloudstream4.rememberAppSettings
+import com.lagradost.cloudstream4.theme.CloudStreamTheme
+import com.lagradost.cloudstream4.theme.perfToColor
+import com.lagradost.cloudstream4.theme.perfToMode
 import com.mihon.presentation.LocalBackPress
 import com.mihon.presentation.settings.collectAsState
 

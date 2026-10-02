@@ -9,7 +9,7 @@ plugins {
 kotlin {
     android {
         // Must be unique
-        namespace = "com.dolus.flixie4"
+        namespace = "com.lagradost.cloudstream4"
         compileSdk = libs.versions.compileSdk.get().toInt()
         minSdk = libs.versions.minSdk.get().toInt()
 
@@ -27,8 +27,8 @@ kotlin {
     sourceSets {
         all {
             languageSettings {
-                optIn("com.dolus.flixie.InternalAPI")
-                optIn("com.dolus.flixie.Prerelease")
+                optIn("com.lagradost.cloudstream3.InternalAPI")
+                optIn("com.lagradost.cloudstream3.Prerelease")
             }
         }
 
@@ -61,6 +61,6 @@ dependencies {
 
 compose.resources {
     publicResClass = true
-    packageOfResClass = "com.dolus.flixie4.generated.resources"
+    packageOfResClass = "com.lagradost.cloudstream4.generated.resources"
     generateResClass = auto
 }

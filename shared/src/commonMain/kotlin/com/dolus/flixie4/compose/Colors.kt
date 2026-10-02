@@ -1,4 +1,4 @@
-package com.dolus.flixie4.compose
+package com.lagradost.cloudstream4.compose
 
 import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.MaterialTheme

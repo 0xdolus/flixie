@@ -1,10 +1,10 @@
-package com.dolus.flixie4
+package com.lagradost.cloudstream4
 
 import androidx.compose.runtime.Composable
-import com.dolus.flixie.AllLanguagesName
-import com.dolus.flixie.DubStatus
-import com.dolus.flixie.SearchQuality
-import com.dolus.flixie.TvType
+import com.lagradost.cloudstream3.AllLanguagesName
+import com.lagradost.cloudstream3.DubStatus
+import com.lagradost.cloudstream3.SearchQuality
+import com.lagradost.cloudstream3.TvType
 import com.mihon.common.preference.PreferenceStore
 import com.mihon.common.preference.getEnumSet
 

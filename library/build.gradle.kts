@@ -23,8 +23,8 @@ kotlin {
     applyDefaultHierarchyTemplate()
 
     android {
-        // If this is the same com.dolus.flixie.R stops working
-        namespace = "com.dolus.api"
+        // If this is the same com.lagradost.cloudstream3.R stops working
+        namespace = "com.lagradost.api"
 
         compileSdk = libs.versions.compileSdk.get().toInt()
         minSdk = libs.versions.minSdk.get().toInt()
@@ -47,8 +47,8 @@ kotlin {
     sourceSets {
         all {
             languageSettings {
-                optIn("com.dolus.flixie.InternalAPI")
-                optIn("com.dolus.flixie.Prerelease")
+                optIn("com.lagradost.cloudstream3.InternalAPI")
+                optIn("com.lagradost.cloudstream3.Prerelease")
             }
         }
 
@@ -90,8 +90,8 @@ kotlin {
     abiValidation {
         filters {
             exclude {
-                annotatedWith.add("com.dolus.flixie.Prerelease")
-                annotatedWith.add("com.dolus.flixie.InternalAPI")
+                annotatedWith.add("com.lagradost.cloudstream3.Prerelease")
+                annotatedWith.add("com.lagradost.cloudstream3.InternalAPI")
             }
         }
     }
@@ -104,7 +104,7 @@ tasks.withType<KotlinJvmCompile> {
 }
 
 buildkonfig {
-    packageName = "com.dolus.api"
+    packageName = "com.lagradost.api"
     exposeObjectWithName = "BuildConfig"
 
     defaultConfigs {
@@ -126,7 +126,7 @@ buildkonfig {
 publishing {
     publications {
         withType<MavenPublication> {
-            groupId = "com.dolus.api"
+            groupId = "com.lagradost.api"
         }
     }
 }

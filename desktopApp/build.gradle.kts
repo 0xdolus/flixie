@@ -31,7 +31,7 @@ tasks.withType<JavaExec> {
 
 compose.desktop {
     application {
-        mainClass = "com.dolus.flixie4.MainKt"
+        mainClass = "com.lagradost.cloudstream4.MainKt"
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "CloudStream"

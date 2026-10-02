@@ -1,4 +1,4 @@
-package com.dolus.flixie4.compose
+package com.lagradost.cloudstream4.compose
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.size

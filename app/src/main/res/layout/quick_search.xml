@@ -86,7 +86,7 @@
         android:descendantFocusability="afterDescendants"
         tools:listitem="@layout/homepage_parent" />
 
-    <com.dolus.flixie.ui.AutofitRecyclerView
+    <com.lagradost.cloudstream3.ui.AutofitRecyclerView
         android:id="@+id/quick_search_autofit_results"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -1,4 +1,4 @@
-package com.dolus.flixie4
+package com.lagradost.cloudstream4
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -12,15 +12,15 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
-import com.dolus.flixie4.compose.BlackButton
-import com.dolus.flixie4.compose.LocalFocusOutlineDefault
-import com.dolus.flixie4.compose.WhiteButton
-import com.dolus.flixie4.generated.resources.Res
-import com.dolus.flixie4.generated.resources.app_name
-import com.dolus.flixie4.generated.resources.default_icon
-import com.dolus.flixie4.generated.resources.preview
-import com.dolus.flixie4.theme.CloudStreamTheme
-import com.dolus.flixie4.theme.CloudStreamThemeMode
+import com.lagradost.cloudstream4.compose.BlackButton
+import com.lagradost.cloudstream4.compose.LocalFocusOutlineDefault
+import com.lagradost.cloudstream4.compose.WhiteButton
+import com.lagradost.cloudstream4.generated.resources.Res
+import com.lagradost.cloudstream4.generated.resources.app_name
+import com.lagradost.cloudstream4.generated.resources.default_icon
+import com.lagradost.cloudstream4.generated.resources.preview
+import com.lagradost.cloudstream4.theme.CloudStreamTheme
+import com.lagradost.cloudstream4.theme.CloudStreamThemeMode
 import com.mihon.presentation.settings.widget.SwitchPreferenceWidget
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource

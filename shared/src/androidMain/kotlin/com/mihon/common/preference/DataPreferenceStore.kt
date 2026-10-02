@@ -2,8 +2,8 @@ package com.mihon.common.preference
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.dolus.flixie.utils.AppUtils.parseJson
-import com.dolus.flixie.utils.AppUtils.toJsonLiteral
+import com.lagradost.cloudstream3.utils.AppUtils.parseJson
+import com.lagradost.cloudstream3.utils.AppUtils.toJsonLiteral
 import kotlinx.coroutines.flow.MutableSharedFlow
 
 /**

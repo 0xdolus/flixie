@@ -1,4 +1,4 @@
-package com.dolus.flixie4.theme
+package com.lagradost.cloudstream4.theme
 
 import android.content.Context
 import android.os.Build

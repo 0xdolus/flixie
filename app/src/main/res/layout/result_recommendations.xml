@@ -22,7 +22,7 @@
                 android:layout_marginEnd="0dp"
                 app:layout_constraintBottom_toTopOf="@id/result_recommendations_list" />
 
-        <com.dolus.flixie.ui.AutofitRecyclerView
+        <com.lagradost.cloudstream3.ui.AutofitRecyclerView
                 android:descendantFocusability="afterDescendants"
 
                 android:background="?attr/primaryBlackBackground"

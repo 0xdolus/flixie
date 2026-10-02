@@ -1,4 +1,4 @@
-package com.dolus.flixie4.compose
+package com.lagradost.cloudstream4.compose
 
 import android.app.UiModeManager
 import android.content.Context
@@ -8,7 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.ProvidableCompositionLocal
 import androidx.compose.runtime.staticCompositionLocalOf
-import com.dolus.flixie4.compose.DeviceLayout.Companion.LocalLayout
+import com.lagradost.cloudstream4.compose.DeviceLayout.Companion.LocalLayout
 
 @JvmInline
 @Immutable

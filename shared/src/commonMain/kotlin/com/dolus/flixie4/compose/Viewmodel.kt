@@ -1,4 +1,4 @@
-package com.dolus.flixie4.compose
+package com.lagradost.cloudstream4.compose
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect

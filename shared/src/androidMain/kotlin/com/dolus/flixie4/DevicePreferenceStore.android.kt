@@ -1,4 +1,4 @@
-package com.dolus.flixie4
+package com.lagradost.cloudstream4
 
 import android.content.Context
 import androidx.compose.runtime.Composable

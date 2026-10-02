@@ -92,7 +92,7 @@
 
                 </LinearLayout>
 
-                <com.dolus.flixie.widget.FlowLayout
+                <com.lagradost.cloudstream3.widget.FlowLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:itemSpacing="10dp">
@@ -121,7 +121,7 @@
                         android:id="@+id/resultview_preview_meta_duration"
                         style="@style/ResultInfoText"
                         tools:text="121min" />
-                </com.dolus.flixie.widget.FlowLayout>
+                </com.lagradost.cloudstream3.widget.FlowLayout>
 
                 <!-- <TextView
                      android:id="@+id/resultview_preview_year"

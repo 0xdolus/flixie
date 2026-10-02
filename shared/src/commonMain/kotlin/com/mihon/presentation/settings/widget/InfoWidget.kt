@@ -10,11 +10,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.PreviewLightDark
-import com.dolus.flixie4.generated.resources.Res
-import com.dolus.flixie4.generated.resources.info
-import com.dolus.flixie4.generated.resources.lorem_content
-import com.dolus.flixie4.generated.resources.lorem_title
-import com.dolus.flixie4.theme.CloudStreamPreviewTheme
+import com.lagradost.cloudstream4.generated.resources.Res
+import com.lagradost.cloudstream4.generated.resources.info
+import com.lagradost.cloudstream4.generated.resources.lorem_content
+import com.lagradost.cloudstream4.generated.resources.lorem_title
+import com.lagradost.cloudstream4.theme.CloudStreamPreviewTheme
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import com.mihon.presentation.secondaryItemAlpha

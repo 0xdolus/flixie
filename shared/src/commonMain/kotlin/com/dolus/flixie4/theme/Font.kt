@@ -1,4 +1,4 @@
-package com.dolus.flixie4.theme
+package com.lagradost.cloudstream4.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.runtime.Composable
@@ -6,19 +6,19 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.em
-import com.dolus.flixie4.generated.resources.Res
-import com.dolus.flixie4.generated.resources.productsans_black
-import com.dolus.flixie4.generated.resources.productsans_blackitalic
-import com.dolus.flixie4.generated.resources.productsans_bold
-import com.dolus.flixie4.generated.resources.productsans_bolditalic
-import com.dolus.flixie4.generated.resources.productsans_italic
-import com.dolus.flixie4.generated.resources.productsans_light
-import com.dolus.flixie4.generated.resources.productsans_lightitalic
-import com.dolus.flixie4.generated.resources.productsans_medium
-import com.dolus.flixie4.generated.resources.productsans_mediumitalic
-import com.dolus.flixie4.generated.resources.productsans_regular
-import com.dolus.flixie4.generated.resources.productsans_thin
-import com.dolus.flixie4.generated.resources.productsans_thinitalic
+import com.lagradost.cloudstream4.generated.resources.Res
+import com.lagradost.cloudstream4.generated.resources.productsans_black
+import com.lagradost.cloudstream4.generated.resources.productsans_blackitalic
+import com.lagradost.cloudstream4.generated.resources.productsans_bold
+import com.lagradost.cloudstream4.generated.resources.productsans_bolditalic
+import com.lagradost.cloudstream4.generated.resources.productsans_italic
+import com.lagradost.cloudstream4.generated.resources.productsans_light
+import com.lagradost.cloudstream4.generated.resources.productsans_lightitalic
+import com.lagradost.cloudstream4.generated.resources.productsans_medium
+import com.lagradost.cloudstream4.generated.resources.productsans_mediumitalic
+import com.lagradost.cloudstream4.generated.resources.productsans_regular
+import com.lagradost.cloudstream4.generated.resources.productsans_thin
+import com.lagradost.cloudstream4.generated.resources.productsans_thinitalic
 import org.jetbrains.compose.resources.Font
 
 object AppFont {

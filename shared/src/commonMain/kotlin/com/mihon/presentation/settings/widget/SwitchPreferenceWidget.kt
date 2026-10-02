@@ -8,9 +8,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.tooling.preview.PreviewLightDark
-import com.dolus.flixie4.generated.resources.Res
-import com.dolus.flixie4.generated.resources.preview
-import com.dolus.flixie4.theme.CloudStreamPreviewTheme
+import com.lagradost.cloudstream4.generated.resources.Res
+import com.lagradost.cloudstream4.generated.resources.preview
+import com.lagradost.cloudstream4.theme.CloudStreamPreviewTheme
 import org.jetbrains.compose.resources.painterResource
 
 @Composable

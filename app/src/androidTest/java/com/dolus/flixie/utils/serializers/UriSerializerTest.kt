@@ -1,8 +1,8 @@
-package com.dolus.flixie.utils.serializers
+package com.lagradost.cloudstream3.utils.serializers
 
 import android.net.Uri
-import com.dolus.flixie.utils.AppUtils.parseJson
-import com.dolus.flixie.utils.AppUtils.toJson
+import com.lagradost.cloudstream3.utils.AppUtils.parseJson
+import com.lagradost.cloudstream3.utils.AppUtils.toJson
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import org.junit.Assert.assertEquals

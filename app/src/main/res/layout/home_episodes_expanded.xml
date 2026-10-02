@@ -47,7 +47,7 @@
                 android:contentDescription="@string/home_expanded_hide" />
     </FrameLayout>
 
-    <com.dolus.flixie.ui.AutofitRecyclerView
+    <com.lagradost.cloudstream3.ui.AutofitRecyclerView
             android:descendantFocusability="afterDescendants"
 
             android:layout_width="match_parent"

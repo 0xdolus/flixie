@@ -1,4 +1,4 @@
-package com.dolus.flixie4.compose
+package com.lagradost.cloudstream4.compose
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.border
@@ -35,15 +35,15 @@ import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.DialogProperties
-import com.dolus.flixie4.compose.colorpicker.DoubleColorPicker
-import com.dolus.flixie4.compose.colorpicker.HsvColor
-import com.dolus.flixie4.generated.resources.Res
-import com.dolus.flixie4.generated.resources.cancel
-import com.dolus.flixie4.generated.resources.color
-import com.dolus.flixie4.generated.resources.color_wheel
-import com.dolus.flixie4.generated.resources.luminance
-import com.dolus.flixie4.generated.resources.ok
-import com.dolus.flixie4.generated.resources.transparency
+import com.lagradost.cloudstream4.compose.colorpicker.DoubleColorPicker
+import com.lagradost.cloudstream4.compose.colorpicker.HsvColor
+import com.lagradost.cloudstream4.generated.resources.Res
+import com.lagradost.cloudstream4.generated.resources.cancel
+import com.lagradost.cloudstream4.generated.resources.color
+import com.lagradost.cloudstream4.generated.resources.color_wheel
+import com.lagradost.cloudstream4.generated.resources.luminance
+import com.lagradost.cloudstream4.generated.resources.ok
+import com.lagradost.cloudstream4.generated.resources.transparency
 import com.mihon.material.Slider
 import com.mihon.material.padding
 import org.jetbrains.compose.resources.stringResource

@@ -1,7 +1,7 @@
-package com.dolus.flixie
+package com.lagradost.cloudstream3
 
-import com.dolus.flixie.ui.player.SubtitleData
-import com.dolus.flixie.ui.player.SubtitleOrigin
+import com.lagradost.cloudstream3.ui.player.SubtitleData
+import com.lagradost.cloudstream3.ui.player.SubtitleOrigin
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Test

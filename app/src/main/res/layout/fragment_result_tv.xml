@@ -27,7 +27,7 @@ https://developer.android.com/design/ui/tv/samples/jet-fit
         android:visibility="visible">
 
 
-        <com.dolus.flixie.utils.PercentageCropImageView
+        <com.lagradost.cloudstream3.utils.PercentageCropImageView
             android:id="@+id/background_poster"
             android:layout_width="match_parent"
             android:layout_height="275dp"
@@ -560,7 +560,7 @@ https://developer.android.com/design/ui/tv/samples/jet-fit
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="UselessParent">
 
-                    <com.dolus.flixie.widget.FlowLayout
+                    <com.lagradost.cloudstream3.widget.FlowLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
@@ -603,7 +603,7 @@ https://developer.android.com/design/ui/tv/samples/jet-fit
                             android:id="@+id/result_meta_duration"
                             style="@style/ResultInfoText"
                             tools:text="121min" />
-                    </com.dolus.flixie.widget.FlowLayout>
+                    </com.lagradost.cloudstream3.widget.FlowLayout>
 
 
                     <TextView
@@ -707,7 +707,7 @@ https://developer.android.com/design/ui/tv/samples/jet-fit
                     android:textSize="17sp" />
             </LinearLayout>
 
-            <com.dolus.flixie.ui.AutofitRecyclerView
+            <com.lagradost.cloudstream3.ui.AutofitRecyclerView
                 android:id="@+id/result_recommendations_list"
                 android:layout_width="match_parent"
 
@@ -787,7 +787,7 @@ https://developer.android.com/design/ui/tv/samples/jet-fit
             tools:ignore="RtlHardcoded"
             tools:visibility="visible">
 
-            <com.dolus.flixie.ui.MaxRecyclerView
+            <com.lagradost.cloudstream3.ui.MaxRecyclerView
                 android:id="@+id/result_dub_selection"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -801,7 +801,7 @@ https://developer.android.com/design/ui/tv/samples/jet-fit
                 tools:listitem="@layout/result_selection"
                 tools:visibility="gone" />
 
-            <com.dolus.flixie.ui.MaxRecyclerView
+            <com.lagradost.cloudstream3.ui.MaxRecyclerView
                 android:id="@+id/result_season_selection"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -815,7 +815,7 @@ https://developer.android.com/design/ui/tv/samples/jet-fit
                 tools:listitem="@layout/result_selection"
                 tools:visibility="gone" />
 
-            <com.dolus.flixie.ui.MaxRecyclerView
+            <com.lagradost.cloudstream3.ui.MaxRecyclerView
                 android:id="@+id/result_range_selection"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -943,7 +943,7 @@ https://developer.android.com/design/ui/tv/samples/jet-fit
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
-                            <com.dolus.flixie.widget.FlowLayout
+                            <com.lagradost.cloudstream3.widget.FlowLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 app:itemSpacing="10dp">
@@ -978,7 +978,7 @@ https://developer.android.com/design/ui/tv/samples/jet-fit
                                     android:id="@+id/result_meta_duration"
                                     style="@style/ResultInfoText"
                                     tools:text="121min" />
-                            </com.dolus.flixie.widget.FlowLayout>
+                            </com.lagradost.cloudstream3.widget.FlowLayout>
 
                             <TextView
                                 android:id="@+id/result_description"

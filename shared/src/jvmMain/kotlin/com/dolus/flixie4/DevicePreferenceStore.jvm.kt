@@ -1,4 +1,4 @@
-package com.dolus.flixie4
+package com.lagradost.cloudstream4
 
 import androidx.compose.runtime.Composable
 import com.mihon.common.preference.InMemoryPreferenceStore

@@ -6,7 +6,7 @@
     android:background="?attr/primaryGrayBackground"
     android:layout_height="match_parent">
 
-    <com.dolus.flixie.utils.PercentageCropImageView
+    <com.lagradost.cloudstream3.utils.PercentageCropImageView
         android:id="@+id/home_scroll_preview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

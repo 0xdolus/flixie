@@ -9,8 +9,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.unit.dp
-import com.dolus.flixie4.compose.ColorCircle
-import com.dolus.flixie4.compose.ColorDialog
+import com.lagradost.cloudstream4.compose.ColorCircle
+import com.lagradost.cloudstream4.compose.ColorDialog
 
 @Composable
 fun ColorPreferenceWidget(

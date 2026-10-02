@@ -137,7 +137,7 @@
 
     <fragment
         android:id="@+id/navigation_settings_player"
-        android:name="com.dolus.flixie.ui.settings.SettingsPlayer2"
+        android:name="com.lagradost.cloudstream3.ui.settings.SettingsPlayer2"
         android:label="@string/title_settings"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -161,7 +161,7 @@
 
     <fragment
         android:id="@+id/navigation_settings_ui"
-        android:name="com.dolus.flixie.ui.settings.SettingsUI2"
+        android:name="com.lagradost.cloudstream3.ui.settings.SettingsUI2"
         android:label="@string/title_settings"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -170,7 +170,7 @@
 
     <fragment
         android:id="@+id/navigation_library"
-        android:name="com.dolus.flixie.ui.library.LibraryFragment"
+        android:name="com.lagradost.cloudstream3.ui.library.LibraryFragment"
         android:label="@string/library"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -179,7 +179,7 @@
 
     <fragment
         android:id="@+id/navigation_settings_general"
-        android:name="com.dolus.flixie.ui.settings.SettingsGeneral2"
+        android:name="com.lagradost.cloudstream3.ui.settings.SettingsGeneral2"
         android:label="@string/title_settings"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -196,7 +196,7 @@
 
     <fragment
         android:id="@+id/navigation_settings_extensions"
-        android:name="com.dolus.flixie.ui.settings.extensions.ExtensionsFragment"
+        android:name="com.lagradost.cloudstream3.ui.settings.extensions.ExtensionsFragment"
         android:label="@string/title_settings"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -227,7 +227,7 @@
 
     <fragment
         android:id="@+id/navigation_settings_plugins"
-        android:name="com.dolus.flixie.ui.settings.extensions.PluginsFragment"
+        android:name="com.lagradost.cloudstream3.ui.settings.extensions.PluginsFragment"
         android:label="@string/title_settings"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -237,7 +237,7 @@
 
     <fragment
         android:id="@+id/navigation_webview"
-        android:name="com.dolus.flixie.ui.WebviewFragment"
+        android:name="com.lagradost.cloudstream3.ui.WebviewFragment"
         android:label="@string/title_settings"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -247,7 +247,7 @@
 
     <fragment
         android:id="@+id/navigation_settings_providers"
-        android:name="com.dolus.flixie.ui.settings.SettingsProviders2"
+        android:name="com.lagradost.cloudstream3.ui.settings.SettingsProviders2"
         android:label="@string/title_settings"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -256,7 +256,7 @@
 
     <fragment
         android:id="@+id/navigation_settings_updates"
-        android:name="com.dolus.flixie.ui.settings.SettingsUpdates2"
+        android:name="com.lagradost.cloudstream3.ui.settings.SettingsUpdates2"
         android:label="@string/title_settings"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -265,7 +265,7 @@
 
     <fragment
         android:id="@+id/navigation_settings_account"
-        android:name="com.dolus.flixie.ui.settings.SettingsAccount2"
+        android:name="com.lagradost.cloudstream3.ui.settings.SettingsAccount2"
         android:label="@string/title_settings"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -291,7 +291,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.dolus.flixie.ui.home.HomeFragment"
+        android:name="com.lagradost.cloudstream3.ui.home.HomeFragment"
         android:label="@string/title_home"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -309,7 +309,7 @@
 
     <fragment
         android:id="@+id/navigation_search"
-        android:name="com.dolus.flixie.ui.search.SearchFragment"
+        android:name="com.lagradost.cloudstream3.ui.search.SearchFragment"
         android:label="@string/title_search"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -324,7 +324,7 @@
 
     <fragment
         android:id="@+id/navigation_downloads"
-        android:name="com.dolus.flixie.ui.download.DownloadFragment"
+        android:name="com.lagradost.cloudstream3.ui.download.DownloadFragment"
         android:label="@string/title_downloads"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -356,7 +356,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_settings"
-        android:name="com.dolus.flixie.ui.settings.SettingsFragment2"
+        android:name="com.lagradost.cloudstream3.ui.settings.SettingsFragment2"
         android:layout_height="match_parent"
         android:label="@string/title_settings"
         app:enterAnim="@anim/enter_anim"
@@ -416,7 +416,7 @@
 
     <fragment
         android:id="@+id/navigation_subtitles"
-        android:name="com.dolus.flixie.ui.subtitles.SubtitlesFragment2"
+        android:name="com.lagradost.cloudstream3.ui.subtitles.SubtitlesFragment2"
         android:layout_height="match_parent"
         android:label="@string/subtitles_settings"
         app:enterAnim="@anim/enter_anim"
@@ -427,7 +427,7 @@
 
     <fragment
         android:id="@+id/navigation_chrome_subtitles"
-        android:name="com.dolus.flixie.ui.subtitles.ChromecastSubtitlesFragment2"
+        android:name="com.lagradost.cloudstream3.ui.subtitles.ChromecastSubtitlesFragment2"
         android:layout_height="match_parent"
         android:label="@string/chromecast_subtitles_settings"
         app:enterAnim="@anim/enter_anim"
@@ -438,7 +438,7 @@
 
     <fragment
         android:id="@+id/navigation_quick_search"
-        android:name="com.dolus.flixie.ui.quicksearch.QuickSearchFragment"
+        android:name="com.lagradost.cloudstream3.ui.quicksearch.QuickSearchFragment"
         android:layout_height="match_parent"
         android:label="@string/search"
         app:enterAnim="@anim/enter_anim"
@@ -449,7 +449,7 @@
 
     <fragment
         android:id="@+id/navigation_download_child"
-        android:name="com.dolus.flixie.ui.download.DownloadChildFragment"
+        android:name="com.lagradost.cloudstream3.ui.download.DownloadChildFragment"
         android:layout_height="match_parent"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -467,7 +467,7 @@
 
     <fragment
         android:id="@+id/navigation_download_queue"
-        android:name="com.dolus.flixie.ui.download.queue.DownloadQueueFragment"
+        android:name="com.lagradost.cloudstream3.ui.download.queue.DownloadQueueFragment"
         android:layout_height="match_parent"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -486,7 +486,7 @@
 
     <fragment
         android:id="@+id/navigation_results_phone"
-        android:name="com.dolus.flixie.ui.result.ResultTrailerPlayer"
+        android:name="com.lagradost.cloudstream3.ui.result.ResultTrailerPlayer"
         android:layout_height="match_parent"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -511,7 +511,7 @@
 
     <fragment
         android:id="@+id/navigation_results_tv"
-        android:name="com.dolus.flixie.ui.result.ResultFragmentTv"
+        android:name="com.lagradost.cloudstream3.ui.result.ResultFragmentTv"
         android:layout_height="match_parent"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -536,7 +536,7 @@
 
     <!--<fragment
         android:id="@+id/navigation_results"
-        android:name="com.dolus.flixie.ui.result.ResultFragment"
+        android:name="com.lagradost.cloudstream3.ui.result.ResultFragment"
         android:layout_height="match_parent"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -561,7 +561,7 @@
 
     <fragment
         android:id="@+id/navigation_player"
-        android:name="com.dolus.flixie.ui.player.GeneratorPlayer"
+        android:name="com.lagradost.cloudstream3.ui.player.GeneratorPlayer"
         android:layout_height="match_parent"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -571,7 +571,7 @@
 
     <fragment
         android:id="@+id/navigation_test_providers"
-        android:name="com.dolus.flixie.ui.settings.testing.TestFragment"
+        android:name="com.lagradost.cloudstream3.ui.settings.testing.TestFragment"
         android:layout_height="match_parent"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -589,7 +589,7 @@
 
     <fragment
         android:id="@+id/navigation_setup_language"
-        android:name="com.dolus.flixie.ui.setup.SetupFragmentLanguage"
+        android:name="com.lagradost.cloudstream3.ui.setup.SetupFragmentLanguage"
         android:layout_height="match_parent"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -620,7 +620,7 @@
 
     <fragment
         android:id="@+id/navigation_setup_extensions"
-        android:name="com.dolus.flixie.ui.setup.SetupFragmentExtensions"
+        android:name="com.lagradost.cloudstream3.ui.setup.SetupFragmentExtensions"
         android:layout_height="match_parent"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -645,7 +645,7 @@
 
     <fragment
         android:id="@+id/navigation_setup_provider_languages"
-        android:name="com.dolus.flixie.ui.setup.SetupFragmentProviderLanguage"
+        android:name="com.lagradost.cloudstream3.ui.setup.SetupFragmentProviderLanguage"
         android:layout_height="match_parent"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -663,7 +663,7 @@
 
     <fragment
         android:id="@+id/navigation_setup_media"
-        android:name="com.dolus.flixie.ui.setup.SetupFragmentMedia"
+        android:name="com.lagradost.cloudstream3.ui.setup.SetupFragmentMedia"
         android:layout_height="match_parent"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -681,7 +681,7 @@
 
     <fragment
         android:id="@+id/navigation_setup_layout"
-        android:name="com.dolus.flixie.ui.setup.SetupFragmentLayout"
+        android:name="com.lagradost.cloudstream3.ui.setup.SetupFragmentLayout"
         android:layout_height="match_parent"
         app:enterAnim="@anim/enter_anim"
         app:exitAnim="@anim/exit_anim"
@@ -691,13 +691,13 @@
 
     <activity
         android:id="@+id/accountSelectActivity"
-        android:name="com.dolus.flixie.ui.account.AccountSelectActivity"
+        android:name="com.lagradost.cloudstream3.ui.account.AccountSelectActivity"
         android:label="AccountSelectActivity"
         tools:layout="@layout/activity_account_select" />
 
     <fragment
         android:id="@+id/easterEggMonkeFragment"
-        android:name="com.dolus.flixie.ui.EasterEggMonkeFragment"
+        android:name="com.lagradost.cloudstream3.ui.EasterEggMonkeFragment"
         android:label="EasterEggMonkeFragment"
         tools:layout="@layout/fragment_easter_egg_monke" />
 </navigation>

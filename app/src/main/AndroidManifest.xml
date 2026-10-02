@@ -92,7 +92,7 @@
 
         <meta-data
             android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME"
-            android:value="com.dolus.flixie.utils.CastOptionsProvider" />
+            android:value="com.lagradost.cloudstream3.utils.CastOptionsProvider" />
 
         <profileable
             android:shell="true"
@@ -105,7 +105,7 @@
             android:resizeableActivity="true"
             android:screenOrientation="userLandscape"
             android:supportsPictureInPicture="true"
-            android:taskAffinity="com.dolus.flixie.downloadedplayer"
+            android:taskAffinity="com.lagradost.cloudstream3.downloadedplayer"
             android:launchMode="singleTask"
             tools:ignore="DiscouragedApi">
             <intent-filter>

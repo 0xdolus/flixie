@@ -368,7 +368,7 @@
                                 android:textStyle="bold"
                                 tools:text="The Perfect Run The Perfect Run" />
 
-                            <com.dolus.flixie.widget.FlowLayout
+                            <com.lagradost.cloudstream3.widget.FlowLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 app:itemSpacing="10dp">
@@ -409,7 +409,7 @@
                                     android:id="@+id/result_meta_duration"
                                     style="@style/ResultInfoText"
                                     tools:text="121min" />
-                            </com.dolus.flixie.widget.FlowLayout>
+                            </com.lagradost.cloudstream3.widget.FlowLayout>
 
                             <!--
                             This has half margin and half padding to make TV focus on description look better.
@@ -542,7 +542,7 @@
                         style="@style/ChipParent"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
-                    <!--<com.dolus.flixie.widget.FlowLayout
+                    <!--<com.lagradost.cloudstream3.widget.FlowLayout
                             android:id="@+id/result_tag"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />-->
@@ -736,7 +736,7 @@
                                     android:focusable="true"
                                     android:layout_width="match_parent" />-->
 
-                            <com.dolus.flixie.ui.download.button.DownloadButton
+                            <com.lagradost.cloudstream3.ui.download.button.DownloadButton
                                 android:id="@+id/download_button"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -772,7 +772,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
-                            <com.dolus.flixie.widget.FlowLayout
+                            <com.lagradost.cloudstream3.widget.FlowLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="10dp"
@@ -875,7 +875,7 @@
                                     android:textSize="17sp"
                                     android:textStyle="normal"
                                     tools:text="8 Episodes" />
-                            </com.dolus.flixie.widget.FlowLayout>
+                            </com.lagradost.cloudstream3.widget.FlowLayout>
 
 
                             <!--TODO add next airing-->

@@ -236,7 +236,7 @@ android {
         }
     }
 
-    namespace = "com.dolus.flixie"
+    namespace = "com.lagradost.cloudstream3"
 }
 
 dependencies {
@@ -358,8 +358,8 @@ tasks.withType<KotlinJvmCompile> {
         jvmTarget.set(javaTarget)
         jvmDefault.set(JvmDefaultMode.ENABLE)
         optIn.addAll(
-            "com.dolus.flixie.InternalAPI",
-            "com.dolus.flixie.Prerelease",
+            "com.lagradost.cloudstream3.InternalAPI",
+            "com.lagradost.cloudstream3.Prerelease",
         )
     }
 }

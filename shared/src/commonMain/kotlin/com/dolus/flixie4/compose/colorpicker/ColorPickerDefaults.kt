@@ -1,4 +1,4 @@
-package com.dolus.flixie4.compose.colorpicker
+package com.lagradost.cloudstream4.compose.colorpicker
 
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.foundation.Canvas

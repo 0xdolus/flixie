@@ -742,7 +742,7 @@
                         android:scaleType="centerCrop" />
                 </FrameLayout>
 
-                <com.dolus.flixie.ui.player.live.LivePreviewTimeBar
+                <com.lagradost.cloudstream3.ui.player.live.LivePreviewTimeBar
                     android:id="@id/exo_progress"
                     android:layout_width="0dp"
                     android:layout_height="30dp"
